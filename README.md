@@ -23,5 +23,6 @@ To set up the AI Chatbot, follow these steps:
    cd ai-chatbot
 
 2. **Open in browser**
+   ```shell
    right click on 'index.html' file
    open in your favourite browser
