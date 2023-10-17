@@ -21,3 +21,7 @@ To set up the AI Chatbot, follow these steps:
    ```shell
    git clone https://github.com/yourusername/ai-chatbot.git
    cd ai-chatbot
+
+2. **Open in browser**
+   right click on 'index.html' file
+   open in your favourite browser
