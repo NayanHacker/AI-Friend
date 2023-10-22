@@ -1,32 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const chatLog = document.getElementById("chatLog");
-    const userInput = document.getElementById("userInput");
-
-    function appendBotMessage(message) {
-        const botMessage = document.createElement("p");
-        botMessage.className = "bot-message";
-        botMessage.textContent = message;
-        chatLog.appendChild(botMessage);
-    }
-
-    function appendUserMessage(message) {
-        const userMessage = document.createElement("p");
-        userMessage.className = "user-message";
-        userMessage.textContent = message;
-        chatLog.appendChild(userMessage);
-    }
-
-    userInput.addEventListener("keyup", function(event) {
-        if (event.key === "Enter") {
-            const userMessage = userInput.value;
-            appendUserMessage(userMessage);
-            userInput.value = "";
-
-            // Replace this section with your chatbot logic
-            // For this example, the bot responds with a simple message.
-            setTimeout(() => {
-                appendBotMessage("I'm just a simple chatbot.");
-            }, 500);
-        }
-    });
-});
+function talk(){
+  var know = {
+    "Hi" : "Hello, Developers Community Here.",
+    "How are you" : "Good :)",
+    "What can i do for you" : "Please Give us A Subscribe.",
+    "ok" : "Thank You So Much <3",
+    "Bye" : "Okay! Will meet soon. TC:).."
+  };
+  var user = document.getElementById('userBox').value;
+    document.getElementById('chatLog').innerHTML = user + "<br>";
+  if (user in know) {
+    document.getElementById('chatLog').innerHTML = know[user] + "<br>";
+  }else{
+    document.getElementById('chatLog').innerHTML = "Sorry,I didn't understand <br>";
+  }
+}
